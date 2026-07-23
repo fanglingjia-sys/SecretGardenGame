@@ -633,6 +633,24 @@
     @keyframes shipping-hover{50%{transform:translateY(-4px)}}@keyframes shipping-drop{to{transform:translate(0,130px) scale(.4);opacity:0}}@keyframes crate-open{50%{transform:rotate(-38deg)}}@keyframes crate-peek{50%{transform:rotate(-8deg)}}
     #travel,#profile,#friend-mode,[data-view="travel"],[data-view="profile"],.travel-share,#gossip-modal{display:none!important}
     @media(max-width:720px){body.gameplay-active #family-mode .farm-map{width:1040px!important;height:660px!important;min-height:660px}.field-seed-dock{bottom:9px;width:min(360px,calc(100% - 18px));grid-template-columns:62px minmax(0,1fr)}.field-bag-tabs .seed-basket{font-size:17px}.field-bag-slot,.field-bag-item{padding:3px;gap:2px}.field-bag-slot>span,.field-bag-item>i{font-size:16px}body.gameplay-active .rotate-hint{display:none!important}.shop-grid,.decor-grid{grid-template-columns:1fr}.merchant-talk{display:none}.shipping-item{min-width:50px}.shipping-scene{height:210px}.pet-room{height:265px}.wall-shelf{right:20px;width:105px}.pet-bed{right:15px;width:112px}.home-spirit-wrap{left:52%}}
+
+    /* Fixed horizontal village street: buildings are curated, not editable. */
+    #layout-toolbar{display:none!important}
+    body.gameplay-active #family-mode .farm-map{width:max(100%,1600px)!important;height:620px!important;min-height:620px;background-color:#8fbd68;background-image:linear-gradient(#8ec7ce 0 16%,#75a65c 16% 20%,transparent 20%),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:100% 100%,16px 16px,16px 16px}
+    body.gameplay-active #family-mode .farm-map:after{content:"";position:absolute;z-index:2;left:0;right:0;top:430px;height:82px;background-color:#c5b58b;background-image:radial-gradient(ellipse at 15% 42%,#8f8368 0 7px,transparent 8px),radial-gradient(ellipse at 38% 67%,#9d9274 0 8px,transparent 9px),radial-gradient(ellipse at 64% 35%,#857a63 0 7px,transparent 8px),radial-gradient(ellipse at 86% 61%,#a2977a 0 8px,transparent 9px);background-size:94px 52px,121px 63px,107px 57px,136px 66px;border-top:4px solid #756d57;border-bottom:4px solid #756d57;pointer-events:none}
+    body.gameplay-active #family-mode .farm-stream{left:0;right:0;top:54px!important;height:72px!important;z-index:1}
+    body.gameplay-active #family-mode .farm-house{left:35px!important;right:auto!important;top:205px!important}
+    body.gameplay-active #family-mode .plots{left:305px!important;right:auto!important;top:190px!important}
+    body.gameplay-active #family-mode .quest-object{left:675px!important;right:auto!important;top:244px!important}
+    body.gameplay-active #family-mode .workshop-object{left:825px!important;right:auto!important;top:220px!important;transform:none!important}
+    body.gameplay-active #family-mode .shipping-bin-object{left:1050px!important;right:auto!important;top:315px!important}
+    body.gameplay-active #family-mode .merchant-object{left:1230px!important;right:auto!important;top:255px!important}
+    body.gameplay-active #family-mode .rest-tent-object{left:1450px!important;right:auto!important;top:300px!important}
+    body.gameplay-active #family-mode .tree.t1{left:250px!important;top:125px!important}body.gameplay-active #family-mode .tree.t2{left:1510px!important;top:130px!important}
+    body.gameplay-active #family-mode .pond{left:1120px!important;right:auto!important;top:145px!important}
+    body.gameplay-active #family-mode .scene-player-object{left:570px;top:465px}
+    body.gameplay-active #family-mode .path-piece,body.gameplay-active #family-mode .scene-path{display:none!important}
+    @media(max-width:720px){body.gameplay-active #family-mode .farm-map{width:1540px!important;height:600px!important;min-height:600px}.interaction-prompt{bottom:74px}}
   </style>
 </head>
 <body>
@@ -1584,10 +1602,10 @@
     return raw.filter((point,index,list)=>{if(index===0||index===list.length-1)return true;const a=list[index-1],b=list[index+1];return Math.sign(point.x-a.x)!==Math.sign(b.x-point.x)||Math.sign(point.y-a.y)!==Math.sign(b.y-point.y)})
   }
   function setCamera(x,y,immediate=false){
-    const maxX=Math.max(0,layoutMap.clientWidth-farmViewport.clientWidth),maxY=Math.max(0,layoutMap.clientHeight-farmViewport.clientHeight);cameraX=clamp(x,0,maxX);cameraY=clamp(y,0,maxY);layoutMap.classList.toggle("camera-moving",!immediate);layoutMap.style.transform=`translate3d(${-Math.round(cameraX)}px,${-Math.round(cameraY)}px,0)`
+    const maxX=Math.max(0,layoutMap.clientWidth-farmViewport.clientWidth);cameraX=clamp(x,0,maxX);cameraY=0;layoutMap.classList.toggle("camera-moving",!immediate);layoutMap.style.transform=`translate3d(${-Math.round(cameraX)}px,0,0)`
   }
   function updateCamera(immediate=false){
-    if(!document.body.classList.contains("gameplay-active"))return;const p=playerPosition();setCamera(p.x-farmViewport.clientWidth*.48,p.y-farmViewport.clientHeight*.62,immediate)
+    if(!document.body.classList.contains("gameplay-active"))return;const p=playerPosition();setCamera(p.x-farmViewport.clientWidth*.48,0,immediate)
   }
   function faceDirection(dx,dy){farmPlayer.dataset.dir=Math.abs(dx)>Math.abs(dy)?(dx>0?"right":"left"):(dy>0?"front":"back")}
   function movePlayerTo(x,y,onDone){
@@ -1643,7 +1661,7 @@
   farmViewport.addEventListener("pointermove",e=>{
     if(!panGesture||panGesture.id!==e.pointerId)return;const dx=e.clientX-panGesture.startX,dy=e.clientY-panGesture.startY;
     if(!panGesture.dragging&&Math.hypot(dx,dy)>8){panGesture.dragging=true;farmViewport.classList.add("camera-dragging");try{farmViewport.setPointerCapture(e.pointerId)}catch(err){}}
-    if(!panGesture.dragging)return;e.preventDefault();setCamera(panGesture.originX-dx,panGesture.originY-dy,true)
+    if(!panGesture.dragging)return;e.preventDefault();setCamera(panGesture.originX-dx,0,true)
   },{passive:false});
   const finishCameraPan=e=>{if(!panGesture||panGesture.id!==e.pointerId)return;if(panGesture.dragging){suppressMapClickUntil=Date.now()+260;farmViewport.classList.remove("camera-dragging");layoutMap.classList.remove("camera-moving")}panGesture=null};
   farmViewport.addEventListener("pointerup",finishCameraPan);farmViewport.addEventListener("pointercancel",finishCameraPan);
@@ -1740,7 +1758,10 @@
   $("preview-memory")?.addEventListener("click",generate);
   syncRealDay();
   render();
-  setupBuildingLayout();
+  buildingLayouts={};
+  localStorage.removeItem(buildingLayoutStorageKey);
+  movableBuildings().forEach(el=>{el.style.removeProperty("left");el.style.removeProperty("right");el.style.removeProperty("top");el.style.removeProperty("bottom");el.style.removeProperty("transform")});
+  layoutToolbar?.remove();
   document.body.classList.toggle("gameplay-active",currentRoom!=="friends");
   if(currentRoom!=="friends")requestAnimationFrame(()=>updateCamera(true));
   window.addEventListener("resize",()=>requestAnimationFrame(()=>updateCamera(true)));

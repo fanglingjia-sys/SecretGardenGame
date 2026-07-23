@@ -1,0 +1,36 @@
+name: Publish uploaded Moyu98 site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'moyu98-site-*.zip.part*'
+
+permissions:
+  contents: write
+
+jobs:
+  unpack-and-publish:
+    if: ${{ hashFiles('moyu98-site-*.zip.part*') != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Rebuild site from uploaded parts
+        shell: bash
+        run: |
+          cat moyu98-site-*.zip.part* > /tmp/moyu98-site.zip
+          mkdir -p /tmp/moyu98-site
+          unzip -q -o /tmp/moyu98-site.zip -d /tmp/moyu98-site
+          rsync -a --delete --exclude='.git' --exclude='.github' /tmp/moyu98-site/ ./
+          touch .nojekyll
+          rm -f moyu98-site-*.zip.part*
+      - name: Commit published site
+        shell: bash
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Publish latest Moyu98 demo'
+          git push

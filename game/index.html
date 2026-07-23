@@ -775,9 +775,22 @@
       width:max(100%,2176px)!important;height:100%!important;min-height:400px;
       background-color:#78ad56!important;
       background-image:url("assets/village-v2/lakeside-street-backplate.png"),url("assets/sprites/farm-ground-grass-seamless.png")!important;
-      background-position:center -180px,0 0!important;
+      background-position:center clamp(-180px,calc(100dvh - 728px),0px),0 0!important;
       background-size:2176px 728px,96px 96px!important;
       background-repeat:no-repeat,repeat!important
+    }
+    body.gameplay-active #family-mode .farm-map:after{
+      content:""!important;display:block!important;position:absolute;z-index:2;
+      left:0;right:0;top:clamp(548px,100dvh,728px);bottom:0;pointer-events:none;
+      background-image:
+        radial-gradient(circle at 18px 22px,#fff4ba 0 2px,#f0c85d 3px,transparent 4px),
+        radial-gradient(circle at 74px 54px,#f0a3a8 0 2px,#f7d49a 3px,transparent 4px),
+        radial-gradient(ellipse at 42px 76px,rgba(62,122,54,.72) 0 3px,transparent 4px),
+        radial-gradient(ellipse at 112px 34px,rgba(67,131,57,.64) 0 2px,transparent 3px),
+        linear-gradient(180deg,rgba(52,111,52,.12),transparent 34%);
+      background-size:173px 137px,239px 181px,127px 103px,211px 149px,100% 100%;
+      background-position:9px 17px,61px 88px,20px 31px,103px 12px,0 0;
+      opacity:.88
     }
     body.gameplay-active #family-mode .farm-house,
     body.gameplay-active #family-mode .village-building,

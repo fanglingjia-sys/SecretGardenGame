@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>鍏辨爾鐢板洯 路 鍍忕礌妯℃嫙缁忚惀 Demo</title>
+  <title>共栖田园 · 像素模拟经营 Demo</title>
   <style>
     :root{
       --ink:#27322e;--muted:#7b8781;--paper:#f6f8f5;--card:#fff;--line:#e6ebe7;
@@ -33,7 +33,7 @@
     .mobilebar{display:none}.modal{position:fixed;inset:0;background:rgba(28,39,33,.48);z-index:20;display:none;place-items:center;padding:20px}.modal.show{display:grid}.sheet{width:min(430px,100%);background:white;border-radius:24px;padding:32px;position:relative;text-align:center}.close{position:absolute;right:15px;top:15px;border:0;background:var(--paper);width:35px;height:35px;border-radius:11px;cursor:pointer}.sheet .petemoji{font-size:46px}.sheet h2{font-size:21px;margin:4px 0 6px}.sheet p{font-size:9px;color:var(--muted)}.sheet textarea{width:100%;min-height:115px;border:1px solid var(--line);background:var(--paper);border-radius:14px;padding:13px;resize:none;margin:12px 0}.toast{position:fixed;left:50%;bottom:27px;transform:translateX(-50%);background:#34443c;color:white;border-radius:99px;padding:11px 15px;font-size:10px;z-index:30;display:none;white-space:nowrap}.toast.show{display:block;animation:toast .2s ease}
     @keyframes breathe{50%{transform:translateY(-5px) rotate(1deg)}}@keyframes hop{30%{transform:translateY(-25px) rotate(-4deg)}65%{transform:translateY(0) rotate(3deg)}}@keyframes toast{from{opacity:0;transform:translate(-50%,10px)}}
     @media(max-width:980px){.side{width:195px}main{margin-left:195px;width:calc(100% - 195px)}.hero{grid-template-columns:1fr 1fr}.statbox{display:none}.travelgrid,.memorygrid{grid-template-columns:1fr}}
-    @media(max-width:720px){.side{display:none}main{margin:0;width:100%;padding-bottom:65px}header{height:68px;padding:0 17px}header>div:first-child small{display:none}header h1{font-size:17px;margin:0}header h1:before{content:"鍏?路 ";color:var(--sage)}.avatar{display:none}.page{padding:7px 13px 30px}.hero{min-height:450px;padding:24px 21px;grid-template-columns:1fr;align-content:start}.copy h2{font-size:26px}.copy p{margin-bottom:0}.copy .soft{display:none}.petstage{height:195px}.pet{width:133px;height:109px}.statbox{display:flex;justify-content:center;gap:28px}.ring{width:70px;height:70px}.ring strong{font-size:17px}.quick{gap:7px}.quick button{display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px 4px;gap:4px}.quick small{display:none}.action{width:37px;height:37px}.quick strong{font-size:9px}.cols{grid-template-columns:1fr}.card{padding:18px}.trip{grid-template-columns:105px 1fr}.tripcopy{padding:16px 13px}.pills,.arrow{display:none}.triphero{min-height:220px;padding:26px 23px}.bigart{left:34%;opacity:.72}.travelgrid,.memorygrid{grid-template-columns:1fr}.wishgrid{grid-template-columns:1fr 1fr}.memoryhead{align-items:start}.feature{grid-template-columns:1fr}.featureart{min-height:190px}.featurecopy{padding:25px}.profilehero{flex-wrap:wrap;padding:17px 0}.profilehero button{width:100%;margin:0}.profilegrid{grid-template-columns:1fr}.mobilebar{position:fixed;display:grid;grid-template-columns:repeat(4,1fr);left:0;right:0;bottom:0;height:64px;background:rgba(255,255,255,.95);border-top:1px solid var(--line);z-index:10}.mobilebar button{border:0;background:transparent;color:#949e99;font-size:18px;display:grid;place-content:center;justify-items:center;cursor:pointer}.mobilebar small{font-size:8px}.mobilebar button.active{color:var(--sage)}.toast{bottom:76px}}
+    @media(max-width:720px){.side{display:none}main{margin:0;width:100%;padding-bottom:65px}header{height:68px;padding:0 17px}header>div:first-child small{display:none}header h1{font-size:17px;margin:0}header h1:before{content:"共 · ";color:var(--sage)}.avatar{display:none}.page{padding:7px 13px 30px}.hero{min-height:450px;padding:24px 21px;grid-template-columns:1fr;align-content:start}.copy h2{font-size:26px}.copy p{margin-bottom:0}.copy .soft{display:none}.petstage{height:195px}.pet{width:133px;height:109px}.statbox{display:flex;justify-content:center;gap:28px}.ring{width:70px;height:70px}.ring strong{font-size:17px}.quick{gap:7px}.quick button{display:flex;flex-direction:column;align-items:center;text-align:center;padding:10px 4px;gap:4px}.quick small{display:none}.action{width:37px;height:37px}.quick strong{font-size:9px}.cols{grid-template-columns:1fr}.card{padding:18px}.trip{grid-template-columns:105px 1fr}.tripcopy{padding:16px 13px}.pills,.arrow{display:none}.triphero{min-height:220px;padding:26px 23px}.bigart{left:34%;opacity:.72}.travelgrid,.memorygrid{grid-template-columns:1fr}.wishgrid{grid-template-columns:1fr 1fr}.memoryhead{align-items:start}.feature{grid-template-columns:1fr}.featureart{min-height:190px}.featurecopy{padding:25px}.profilehero{flex-wrap:wrap;padding:17px 0}.profilehero button{width:100%;margin:0}.profilegrid{grid-template-columns:1fr}.mobilebar{position:fixed;display:grid;grid-template-columns:repeat(4,1fr);left:0;right:0;bottom:0;height:64px;background:rgba(255,255,255,.95);border-top:1px solid var(--line);z-index:10}.mobilebar button{border:0;background:transparent;color:#949e99;font-size:18px;display:grid;place-content:center;justify-items:center;cursor:pointer}.mobilebar small{font-size:8px}.mobilebar button.active{color:var(--sage)}.toast{bottom:76px}}
     @media(max-width:380px){.wishgrid{grid-template-columns:1fr}}
 
     /* Pixel game skin */
@@ -50,7 +50,7 @@
       image-rendering:pixelated
     }
     body{
-      font-family:"SimSun","瀹嬩綋","Microsoft YaHei",monospace;
+      font-family:"SimSun","宋体","Microsoft YaHei",monospace;
       background:transparent;
       letter-spacing:.02em
     }
@@ -70,14 +70,21 @@
     }
     .hero:before{border-radius:0;border:0;box-shadow:none;width:170px;height:120px;right:5%;top:20px;background:linear-gradient(135deg,transparent 20%,rgba(255,255,255,.38) 21% 42%,transparent 43% 58%,rgba(255,255,255,.28) 59% 78%,transparent 79%);clip-path:polygon(0 66%,16% 66%,16% 47%,33% 47%,33% 28%,67% 28%,67% 47%,84% 47%,84% 66%,100% 66%,100% 82%,0 82%)}
     .presence,.petname,.chip,.pills span,.wish span:last-of-type{border:2px solid var(--ink);border-radius:0;box-shadow:2px 2px 0 var(--ink);background:#fffbed}
-    .copy h2,.triphero h2,.memoryhead h2,.featurecopy h2{font-family:"SimSun","瀹嬩綋",monospace;text-shadow:2px 2px 0 rgba(255,255,255,.6)}
+    .copy h2,.triphero h2,.memoryhead h2,.featurecopy h2{font-family:"SimSun","宋体",monospace;text-shadow:2px 2px 0 rgba(255,255,255,.6)}
     .petstage{filter:none}
     .pet{
       width:144px;height:112px;border-radius:0;border:4px solid var(--ink);box-shadow:8px 8px 0 rgba(38,53,46,.25);
       background:#fffbed;clip-path:polygon(8% 23%,21% 23%,21% 0,38% 0,38% 17%,62% 17%,62% 0,79% 0,79% 23%,92% 23%,92% 36%,100% 36%,100% 78%,92% 78%,92% 91%,71% 91%,71% 100%,29% 100%,29% 91%,8% 91%,8% 78%,0 78%,0 36%,8% 36%)
     }
     .pet:before,.pet:after{display:none}
-    .eyes:before,.eyes:after{…60984 tokens truncated…dd("working");el.classList.add("plot-working");
+    .eyes:before,.eyes:after{width:10px;height:12px;…59057 tokens truncated…ve()
+  }
+  function showFieldSpark(el){
+    const viewportRect=farmViewport.getBoundingClientRect(),r=el.getBoundingClientRect(),spark=document.createElement("span");spark.className="farm-action-spark";spark.textContent="✦";spark.style.left=(r.left-viewportRect.left+r.width/2)+"px";spark.style.top=(r.top-viewportRect.top+8)+"px";farmViewport.appendChild(spark);setTimeout(()=>spark.remove(),650)
+  }
+  function requestPlotInteraction(index,el){
+    if(layoutMode)return;const token=++plotActionToken,target=plotApproachPoint(index,el);if(!target)return toast("这块田边被挡住了，先挪开附近的东西");
+    movePlayerTo(target.x,target.y,()=>{if(token!==plotActionToken)return;const plotRect=rectInMap(el),p=playerPosition();faceDirection(plotRect.x+plotRect.w/2-p.x,plotRect.y+plotRect.h/2-p.y);farmPlayer.classList.add("working");el.classList.add("plot-working");
       setTimeout(()=>{if(token!==plotActionToken)return;const before=state().plots[index]?{...state().plots[index]}:null,beforeWatered=before?.watered;usePlot(index);const after=state().plots[index],bag=$("field-seed-dock");
         if(!before&&after){animateFarmItem(after.crop,0,farmPlayer,el);showFieldSpark(el)}
         else if(before&&!after){animateFarmItem(before.crop,3,el,bag);showFieldSpark(el);const harvestTab=document.querySelector('[data-field-bag-tab="harvest"]');harvestTab?.classList.add("bag-pulse");setTimeout(()=>harvestTab?.classList.remove("bag-pulse"),700)}
@@ -93,7 +100,7 @@
     const candidates=[{x:r.x+r.w/2,y:r.y+r.h+55},{x:r.x-48,y:r.y+r.h*.72},{x:r.x+r.w+48,y:r.y+r.h*.72},{x:r.x+r.w/2,y:r.y-46}].map(c=>nearestWalkable(c.x,c.y)).filter(Boolean);candidates.sort((a,b)=>Math.hypot(a.x-p.x,a.y-p.y)-Math.hypot(b.x-p.x,b.y-p.y));return candidates[0]
   }
   function requestBuildingInteraction(el){
-    const target=approachPoint(el);if(!target)return toast("闂ㄥ彛琚尅浣忎簡锛屽厛鎼紑闄勮繎寤虹瓚");pendingInteraction=el;const name=el.querySelector("strong,.house-sign")?.textContent.trim()||el.getAttribute("aria-label")||"鍦烘櫙浜掑姩";$("interaction-name").textContent=name;movePlayerTo(target.x,target.y,()=>{if(pendingInteraction!==el)return;el.classList.add("nearby");interactionPrompt.classList.add("show")})
+    const target=approachPoint(el);if(!target)return toast("门口被挡住了，先搬开附近建筑");pendingInteraction=el;const name=el.querySelector("strong,.house-sign")?.textContent.trim()||el.getAttribute("aria-label")||"场景互动";$("interaction-name").textContent=name;movePlayerTo(target.x,target.y,()=>{if(pendingInteraction!==el)return;el.classList.add("nearby");interactionPrompt.classList.add("show")})
   }
   farmViewport.addEventListener("pointerdown",e=>{
     if(e.pointerType==="mouse"&&e.button!==0)return;
@@ -119,20 +126,20 @@
   function leaveInterior(){activeInterior=null;farmPlayer.classList.remove("entering-building","inside-building");farmPlayer.style.opacity=""}
   function enterBuilding(target){activeInterior=target.id;farmPlayer.classList.add("entering-building");setTimeout(()=>{farmPlayer.classList.remove("entering-building");farmPlayer.classList.add("inside-building");interactionBypass=true;target.click();interactionBypass=false},300)}
   $("interaction-confirm").addEventListener("click",()=>{const target=pendingInteraction;if(!target)return;hideInteraction();if(target.matches("#open-pet-home,#open-scene-workshop"))enterBuilding(target);else{interactionBypass=true;target.click();interactionBypass=false}});
-  document.querySelectorAll(".modal .close").forEach(button=>{button.type="button";button.setAttribute("aria-label","鍏抽棴");button.addEventListener("click",()=>{lastModalCloseAt=Date.now();leaveInterior()},{capture:true})});
+  document.querySelectorAll(".modal .close").forEach(button=>{button.type="button";button.setAttribute("aria-label","关闭");button.addEventListener("click",()=>{lastModalCloseAt=Date.now();leaveInterior()},{capture:true})});
   document.querySelectorAll(".modal").forEach(modal=>modal.addEventListener("click",e=>{if(e.target===modal)leaveInterior()},{capture:true}));
   document.addEventListener("keydown",e=>{if(e.key!=="Escape")return;const shown=Array.from(document.querySelectorAll(".modal.show"));const top=shown[shown.length-1];if(top){const close=top.querySelector(".close");if(close)close.click();else top.classList.remove("show")}});
   $("open-scene-workshop").addEventListener("click",()=>openSceneMenu("workshop"));
   $("home-name-form").addEventListener("submit",e=>{
     e.preventDefault();const input=$("home-name-input"),next=input.value.trim().replace(/\s+/g," ").slice(0,12);
-    if(!next)return toast("瀹跺洯鍚嶅瓧涓嶈兘鏄┖姘?);
-    games.couple.homeName=next;save();render();toast("瀹跺洯宸叉敼鍚嶄负銆?+next+"銆?)
+    if(!next)return toast("家园名字不能是空气");
+    games.couple.homeName=next;save();render();toast("家园已改名为「"+next+"」")
   });
   $("open-invite").addEventListener("click",()=>$("invite-modal").classList.add("show"));
   $("invite-close").addEventListener("click",()=>$("invite-modal").classList.remove("show"));
   $("invite-modal").addEventListener("click",e=>{if(e.target===$("invite-modal"))$("invite-modal").classList.remove("show")});
-  $("simulate-partner-join").addEventListener("click",()=>{const s=games.couple;if(s.partnerJoined)return toast("灏忔灄宸茬粡鍦ㄥ鍥噷浜?);s.partnerJoined=true;$("invite-modal").classList.remove("show");toast("灏忔灄宸插姞鍏ワ紱鍗曚汉鐜╂硶浠嶇劧鍙互瀹屾暣杩涜");render()});
-  $("partner-helper").addEventListener("click",()=>{const s=games.couple,today=localDayKey();if(!s.partnerJoined)return;if(s.partnerHelpDate===today)return toast("灏忔灄浠婂ぉ宸茬粡甯繃蹇欎簡");const plot=s.plots.find(p=>p&&!p.watered&&Date.now()<p.readyAt);if(plot){plot.watered=true;toast("灏忔灄璺繃鏃跺厤璐规祰浜嗕竴鍧楀湴")}else{s.seeds.turnip++;toast("鏆傛椂娌℃湁鍦拌娴囷紝灏忔灄鐣欎笅浜嗚悵鍗滅瀛?脳1")}s.partnerHelpDate=today;render()});
+  $("simulate-partner-join").addEventListener("click",()=>{const s=games.couple;if(s.partnerJoined)return toast("小林已经在家园里了");s.partnerJoined=true;$("invite-modal").classList.remove("show");toast("小林已加入；单人玩法仍然可以完整进行");render()});
+  $("partner-helper").addEventListener("click",()=>{const s=games.couple,today=localDayKey();if(!s.partnerJoined)return;if(s.partnerHelpDate===today)return toast("小林今天已经帮过忙了");const plot=s.plots.find(p=>p&&!p.watered&&Date.now()<p.readyAt);if(plot){plot.watered=true;toast("小林路过时免费浇了一块地")}else{s.seeds.turnip++;toast("暂时没有地要浇，小林留下了萝卜种子 ×1")}s.partnerHelpDate=today;render()});
   document.querySelectorAll("[data-travel-order]").forEach(b=>b.addEventListener("click",()=>completeTravelOrder(b.dataset.travelOrder)));
   $("open-shipping-bin").addEventListener("click",openShippingSelector);
   $("scene-menu-close").addEventListener("click",()=>$("scene-menu-modal").classList.remove("show"));
@@ -154,20 +161,20 @@
   document.querySelectorAll("[data-office-scene-task]").forEach(b=>b.addEventListener("click",()=>{document.querySelector(`[data-office-task="${b.dataset.officeSceneTask}"]`).click();$("office-task-modal").classList.remove("show")}));
   $("scene-office-tea").addEventListener("click",()=>$("office-snack").click());
   $("scene-office-elevator").addEventListener("click",()=>showView("profile"));
-  $("slack-close").addEventListener("click",()=>{if(slackRunning){clearInterval(slackTimer);slackRunning=false;$("slack-start").disabled=false;$("slack-start").textContent="閲嶆柊寮€濮?}$("slack-modal").classList.remove("show")});
+  $("slack-close").addEventListener("click",()=>{if(slackRunning){clearInterval(slackTimer);slackRunning=false;$("slack-start").disabled=false;$("slack-start").textContent="重新开始"}$("slack-modal").classList.remove("show")});
   $("slack-modal").addEventListener("click",e=>{if(e.target===$("slack-modal"))$("slack-close").click()});
   $("slack-start").addEventListener("click",startSlackGame);
-  $("slack-action").addEventListener("click",()=>{if(!slackRunning)return toast("鍏堢偣鍑诲紑濮嬶紝鍒湪鑰佹澘鐪肩毊搴曚笅绌烘懜");slackScore++;slackAlert=Math.min(100,slackAlert+9+Math.floor(Math.random()*7));paintSlackGame();if(slackAlert>=100)finishSlackGame(true)});
+  $("slack-action").addEventListener("click",()=>{if(!slackRunning)return toast("先点击开始，别在老板眼皮底下空摸");slackScore++;slackAlert=Math.min(100,slackAlert+9+Math.floor(Math.random()*7));paintSlackGame();if(slackAlert>=100)finishSlackGame(true)});
   $("work-action").addEventListener("click",()=>{if(!slackRunning)return;slackAlert=Math.max(0,slackAlert-20);paintSlackGame()});
-  $("fake-work").addEventListener("click",()=>{state().boss=Math.max(0,state().boss-16);toast("閿洏鏁插緱寰堝搷锛岃€佹澘璇互涓洪」鐩湁杩涘睍");render()});
-  $("send-meme").addEventListener("click",()=>{state().slack+=4;state().boss=Math.min(100,state().boss+9);toast("姊楀浘绮惧噯鍛戒腑缇よ亰锛屼絾绗戝０寮曡捣浜嗘敞鎰?);render()});
-  $("office-snack").addEventListener("click",()=>{state().slack+=3;state().boss=Math.max(0,state().boss-8);toast("鑼舵按闂翠紤鏁存垚鍔燂紝骞跺惉鍒颁簡涓€鏉′笉鍙潬鍏崷");render()});
+  $("fake-work").addEventListener("click",()=>{state().boss=Math.max(0,state().boss-16);toast("键盘敲得很响，老板误以为项目有进展");render()});
+  $("send-meme").addEventListener("click",()=>{state().slack+=4;state().boss=Math.min(100,state().boss+9);toast("梗图精准命中群聊，但笑声引起了注意");render()});
+  $("office-snack").addEventListener("click",()=>{state().slack+=3;state().boss=Math.max(0,state().boss-8);toast("茶水间休整成功，并听到了一条不可靠八卦");render()});
   $("next-day").addEventListener("click",saveToday);
   $("sell-all").addEventListener("click",openShippingSelector);
-  $("forage").addEventListener("click",()=>{if(!spendStamina(12))return;const found=1+Math.floor(Math.random()*3);state().inv.berry+=found;gainXp(4);toast("鏋楄竟鎹″埌钃濊帗 脳"+found+"锛屼互鍙婁竴鐗囦笉鍊奸挶鐨勫彾瀛?);render()});
-  $("craft-jam").addEventListener("click",()=>{if(state().resting)return toast("瑙掕壊姝ｅ湪甯愮閲屼紤鎭紝宸ュ潑鏆傛椂鏃犱汉鍊煎畧");if(state().inv.tomato<2)return toast("鐣寗涓嶅锛屽伐鍧婂彧鑳藉姞宸ョ┖姘?);state().inv.tomato-=2;state().inv.jam++;gainXp(8);toast("鍒舵垚鐣寗閰?脳1锛岄攨娌℃湁鐖嗙偢");render()});
-  $("feed-spirit").addEventListener("click",()=>{const s=state();if(s.inv.turnip>0)s.inv.turnip--;else if(s.coins>=15)s.coins-=15;else return toast("娌￠鐗╀篃娌￠挶锛屽疇鐗╁喅瀹氬晝妗岃");const reward=8+Math.floor(Math.random()*6);s.coins+=reward;s.hunger=Math.min(100,s.hunger+18);s.mood=Math.min(100,s.mood+4);gainXp(3);toast(roomInfo[currentRoom].pet+"鍚冮ケ鍚庝粠鍨瓙涓嬬炕鍑?"+reward+" 閲戝竵");render()});
-  $("play-spirit").addEventListener("click",()=>{if(!spendStamina(4))return;state().mood=Math.min(100,state().mood+12);gainXp(3);$("spirit-sprite").animate([{transform:"translateY(0)"},{transform:"translateY(-12px)"},{transform:"translateY(0)"}],{duration:500,iterations:1});toast("鐜╄€嶆垚鍔燂紝瀹犵墿蹇冩儏 +12");render()});
+  $("forage").addEventListener("click",()=>{if(!spendStamina(12))return;const found=1+Math.floor(Math.random()*3);state().inv.berry+=found;gainXp(4);toast("林边捡到蓝莓 ×"+found+"，以及一片不值钱的叶子");render()});
+  $("craft-jam").addEventListener("click",()=>{if(state().resting)return toast("角色正在帐篷里休息，工坊暂时无人值守");if(state().inv.tomato<2)return toast("番茄不够，工坊只能加工空气");state().inv.tomato-=2;state().inv.jam++;gainXp(8);toast("制成番茄酱 ×1，锅没有爆炸");render()});
+  $("feed-spirit").addEventListener("click",()=>{const s=state();if(s.inv.turnip>0)s.inv.turnip--;else if(s.coins>=15)s.coins-=15;else return toast("没食物也没钱，宠物决定啃桌角");const reward=8+Math.floor(Math.random()*6);s.coins+=reward;s.hunger=Math.min(100,s.hunger+18);s.mood=Math.min(100,s.mood+4);gainXp(3);toast(roomInfo[currentRoom].pet+"吃饱后从垫子下翻出 "+reward+" 金币");render()});
+  $("play-spirit").addEventListener("click",()=>{if(!spendStamina(4))return;state().mood=Math.min(100,state().mood+12);gainXp(3);$("spirit-sprite").animate([{transform:"translateY(0)"},{transform:"translateY(-12px)"},{transform:"translateY(0)"}],{duration:500,iterations:1});toast("玩耍成功，宠物心情 +12");render()});
   const openPetRoom=()=>$("pet-home-modal").classList.add("show");
   $("open-pet-home").addEventListener("click",openPetRoom);
   $("open-pet-house").addEventListener("click",openPetRoom);
@@ -175,32 +182,32 @@
   $("pet-home-modal").addEventListener("click",e=>{if(e.target===$("pet-home-modal"))$("pet-home-modal").classList.remove("show")});
   let petHomeBusy=false,petReactionTimer;
   function petHomeReact(type,text,action){
-    if(petHomeBusy)return toast("闈㈠寘杩樺湪蹇欙紝绋嶅井绛夊畠婕斿畬");petHomeBusy=true;clearTimeout(petReactionTimer);const pet=$("pet-home-pet"),reaction=$("pet-reaction"),crumbs=$("pet-food-effect"),bowl=$("pet-food-bowl");pet.classList.remove("eating","petted","playing");pet.classList.add(type);reaction.textContent=text;reaction.classList.add("show");if(type==="eating"){bowl.classList.add("full");bowl.classList.remove("empty");crumbs.classList.add("show")}
+    if(petHomeBusy)return toast("面包还在忙，稍微等它演完");petHomeBusy=true;clearTimeout(petReactionTimer);const pet=$("pet-home-pet"),reaction=$("pet-reaction"),crumbs=$("pet-food-effect"),bowl=$("pet-food-bowl");pet.classList.remove("eating","petted","playing");pet.classList.add(type);reaction.textContent=text;reaction.classList.add("show");if(type==="eating"){bowl.classList.add("full");bowl.classList.remove("empty");crumbs.classList.add("show")}
     setTimeout(()=>action?.(),260);petReactionTimer=setTimeout(()=>{pet.classList.remove(type);reaction.classList.remove("show");crumbs.classList.remove("show");if(type==="eating"){bowl.classList.remove("full");bowl.classList.add("empty")}petHomeBusy=false},1350)
   }
-  const strokePet=()=>petHomeReact("petted","鍛煎櫆鈥︹€﹁繖娆℃懜寰楄繕绠楀強鏍笺€?,()=>{state().mood=Math.min(100,state().mood+5);gainXp(2);render()});
-  $("pet-home-feed").addEventListener("click",()=>{const s=state();if(s.inv.turnip<1&&s.coins<15)return toast("娌℃湁鍙悆鐨勪笢瑗匡紝闈㈠寘寮€濮嬬爺绌舵瑙?);petHomeReact("eating","寮€楗紒闈㈠寘姝ｅ湪璁ょ湡娑堢伃璇佹嵁銆?,()=>$("feed-spirit").click())});
+  const strokePet=()=>petHomeReact("petted","呼噜……这次摸得还算及格。",()=>{state().mood=Math.min(100,state().mood+5);gainXp(2);render()});
+  $("pet-home-feed").addEventListener("click",()=>{const s=state();if(s.inv.turnip<1&&s.coins<15)return toast("没有可吃的东西，面包开始研究桌角");petHomeReact("eating","开饭！面包正在认真消灭证据。",()=>$("feed-spirit").click())});
   $("pet-home-stroke").addEventListener("click",strokePet);$("pet-home-pet").addEventListener("click",strokePet);
-  $("pet-home-play").addEventListener("click",()=>petHomeReact("playing","闈㈠寘杩戒簡涓ゆ锛屽喅瀹氳缇芥瘺鑷繁杩囨潵銆?,()=>$("play-spirit").click()));
-  $("deliver-order").addEventListener("click",()=>{const s=state();if(s.orderDone)return toast("浠婂ぉ鐨勫鎵樺凡缁忎氦杩囦簡锛岄鍫傛嫆缁濆洡鑿?);if(s.inv.turnip<3)return toast("杩樺樊 "+(3-s.inv.turnip)+" 涓悵鍗?);s.inv.turnip-=3;s.coins+=180;s.orderDone=true;gainXp(20);toast("濮旀墭瀹屾垚锛氶噾甯?+180锛岄鍫傜粓浜庡紑楗?);render()});
+  $("pet-home-play").addEventListener("click",()=>petHomeReact("playing","面包追了两步，决定让羽毛自己过来。",()=>$("play-spirit").click()));
+  $("deliver-order").addEventListener("click",()=>{const s=state();if(s.orderDone)return toast("今天的委托已经交过了，食堂拒绝囤菜");if(s.inv.turnip<3)return toast("还差 "+(3-s.inv.turnip)+" 个萝卜");s.inv.turnip-=3;s.coins+=180;s.orderDone=true;gainXp(20);toast("委托完成：金币 +180，食堂终于开饭");render()});
   $("open-scene-merchant").addEventListener("click",()=>$("shop-modal").classList.add("show"));
   $("shop-close").addEventListener("click",()=>$("shop-modal").classList.remove("show"));
   $("shop-modal").addEventListener("click",e=>{if(e.target===$("shop-modal"))$("shop-modal").classList.remove("show")});
   const showShopProduct=card=>{document.querySelectorAll(".shop-item,.decor-item").forEach(el=>el.classList.toggle("active",el===card));$("shop-detail-icon").textContent=card.dataset.productIcon;$("shop-detail-name").textContent=card.dataset.productName;$("shop-detail-desc").textContent=card.dataset.productDesc};
   document.querySelectorAll("[data-shop-tab]").forEach(tab=>tab.addEventListener("click",()=>{document.querySelectorAll("[data-shop-tab]").forEach(b=>b.classList.toggle("active",b===tab));document.querySelectorAll("[data-shop-panel]").forEach(panel=>panel.classList.toggle("active",panel.dataset.shopPanel===tab.dataset.shopTab));const first=document.querySelector(`[data-shop-panel="${tab.dataset.shopTab}"] .shop-item,[data-shop-panel="${tab.dataset.shopTab}"] .decor-item`);if(first)showShopProduct(first)}));
   document.querySelectorAll(".shop-item,.decor-item").forEach(card=>{card.addEventListener("pointerenter",()=>showShopProduct(card));card.addEventListener("click",e=>{if(!e.target.closest("button"))showShopProduct(card)})});
-  document.querySelectorAll("[data-buy]").forEach(b=>b.addEventListener("click",()=>{const price=Number(b.dataset.price),s=state();if(s.coins<price)return toast("閲戝竵涓嶅锛岃€佹澘闈㈠寘鎷掔粷璁蹭环");s.coins-=price;s.seeds[b.dataset.buy]+=3;toast("璐拱鎴愬姛锛氱瀛?脳3");render()}));
-  document.querySelectorAll("[data-decor]").forEach(b=>b.addEventListener("click",()=>{const s=state(),item=b.dataset.decor,price=Number(b.dataset.price);if(s.owned.includes(item)){if(b.dataset.kind==="outfit"){s.equipped=item;toast("宸查噸鏂拌澶囧疇鐗╄鎵?);render()}return}if(s.coins<price)return toast("閲戝竵涓嶅锛屽厛绉嶈彍銆佸姞宸ユ垨鍗栫粰鍟嗕汉");s.coins-=price;s.owned.push(item);if(b.dataset.kind==="outfit")s.equipped=item;if(item==="rug")s.comfort=Math.min(100,s.comfort+8);toast(b.dataset.kind==="outfit"?"璐拱鎴愬姛锛岄潰鍖呭凡缁忓伔鍋锋埓涓婁簡":"璐拱鎴愬姛锛岀墿鍝佸凡鑷姩甯冪疆");render()}));
-  $("shop-upgrade").addEventListener("click",()=>{const s=state();if(s.upgraded)return toast("璋蜂粨宸茬粡鍗囩骇杩囦簡锛屽埆閲嶅瑁呬慨");if(s.coins<600)return toast("杩樺樊 "+(600-s.coins)+" 閲戝竵锛屽厛鍘荤鐢?);s.coins-=600;s.upgraded=true;s.level++;toast("璋蜂粨鍗囩骇瀹屾垚锛屽啘鍦虹瓑绾?+1");render()});
+  document.querySelectorAll("[data-buy]").forEach(b=>b.addEventListener("click",()=>{const price=Number(b.dataset.price),s=state();if(s.coins<price)return toast("金币不够，老板面包拒绝讲价");s.coins-=price;s.seeds[b.dataset.buy]+=3;toast("购买成功：种子 ×3");render()}));
+  document.querySelectorAll("[data-decor]").forEach(b=>b.addEventListener("click",()=>{const s=state(),item=b.dataset.decor,price=Number(b.dataset.price);if(s.owned.includes(item)){if(b.dataset.kind==="outfit"){s.equipped=item;toast("已重新装备宠物装扮");render()}return}if(s.coins<price)return toast("金币不够，先种菜、加工或卖给商人");s.coins-=price;s.owned.push(item);if(b.dataset.kind==="outfit")s.equipped=item;if(item==="rug")s.comfort=Math.min(100,s.comfort+8);toast(b.dataset.kind==="outfit"?"购买成功，面包已经偷偷戴上了":"购买成功，物品已自动布置");render()}));
+  $("shop-upgrade").addEventListener("click",()=>{const s=state();if(s.upgraded)return toast("谷仓已经升级过了，别重复装修");if(s.coins<600)return toast("还差 "+(600-s.coins)+" 金币，先去种田");s.coins-=600;s.upgraded=true;s.level++;toast("谷仓升级完成，农场等级 +1");render()});
   document.querySelectorAll("[data-open-gossip]").forEach(b=>b.addEventListener("click",()=>{renderGossip();$("gossip-modal").classList.add("show")}));
   $("gossip-close").addEventListener("click",()=>$("gossip-modal").classList.remove("show"));
   $("gossip-modal").addEventListener("click",e=>{if(e.target===$("gossip-modal"))$("gossip-modal").classList.remove("show")});
-  $("publish-gossip").addEventListener("click",()=>{const title=$("gossip-subject").value.trim(),body=$("gossip-body").value.trim();if(!title||!body)return toast("鏍囬鍜屾鏂囬兘鍐欎竴鐐癸紝涓嶇劧杩欑摐澶┖浜?);const s=state();s.gossipPosts.push({id:"g"+Date.now(),title,body,author:"鏈辨湵",time:"鍒氬垰",read:true});gainXp(8);if(currentRoom==="friends")s.slack+=3;$("gossip-subject").value="";$("gossip-body").value="";toast(currentRoom==="friends"?"鍖垮悕鎶曠鎴愬姛锛氱粡楠?+8锛屾懜楸煎€?+3":"甯栧瓙宸茶创杩涙儏渚ｇ摐鐢帮細瀹跺涵缁忛獙 +8");render();renderGossip()});
+  $("publish-gossip").addEventListener("click",()=>{const title=$("gossip-subject").value.trim(),body=$("gossip-body").value.trim();if(!title||!body)return toast("标题和正文都写一点，不然这瓜太空了");const s=state();s.gossipPosts.push({id:"g"+Date.now(),title,body,author:"朱朱",time:"刚刚",read:true});gainXp(8);if(currentRoom==="friends")s.slack+=3;$("gossip-subject").value="";$("gossip-body").value="";toast(currentRoom==="friends"?"匿名投稿成功：经验 +8，摸鱼值 +3":"帖子已贴进情侣瓜田：家庭经验 +8");render();renderGossip()});
   $("room-switch").addEventListener("click",()=>showView("profile"));
   $("sidebar-room").addEventListener("click",()=>showView("profile"));
   document.querySelectorAll("[data-sub]").forEach(b=>b.addEventListener("click",()=>{document.querySelectorAll("[data-sub]").forEach(x=>x.classList.toggle("active",x===b));document.querySelectorAll(".sub").forEach(s=>s.classList.toggle("active",s.id===b.dataset.sub))}));
-  $("add-plan")?.addEventListener("click",()=>toast("宸叉妸鏂板湴鐐归拤鍦ㄨ繙琛屽湴鍥句笂"));
-  const generate=()=>toast("鏃呰缁撴潫鍚庯紝杩欓噷浼氭妸鐓х墖銆佽矾绾垮拰鍏卞悓娓呭崟鏁寸悊鎴愪竴浠藉儚绱犲洖蹇?);
+  $("add-plan")?.addEventListener("click",()=>toast("已把新地点钉在远行地图上"));
+  const generate=()=>toast("旅行结束后，这里会把照片、路线和共同清单整理成一份像素回忆");
   $("preview-memory")?.addEventListener("click",generate);
   syncRealDay();
   render();
